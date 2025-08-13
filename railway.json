@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    {
+      "name": "mongodb",
+      "source": "railwayapp/mongodb"
+    }
+  ],
+  "deploy": {
+    "apps": [
+      {
+        "name": "api",
+        "root": "apps/api",
+        "buildCommand": "npm install && npm run build",
+        "startCommand": "npm start",
+        "envFile": "../../.env"
+      }
+    ]
+  }
+}
